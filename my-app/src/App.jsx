@@ -1,26 +1,47 @@
 import React from 'react';
+import Function from './Function';
 import Defaultprops from './Defaultprops';
-import Controledcomponent from './Controledcomponent';
-import Checkbox from './Checkbox';
-import Radiobtn from './Radiobtn'
-import Input from './Input';
-import Loop from './Loop';
-import Componentloop from './Componentloop';
+import Usestate from './Usestate';
+import Conditionalrendering from './Conditionalrendering';
+import Array from './Array';
+import Propsx from './Propsx';
+import './styles.css';
+import Object from './Object';
+import Useeffect from './Useeffect';
+import Usereff from './Usereff';
+
 function App() {
-  let arr = ["Adeel", 29, "BSSE"];
+  let arr = ["hello", 20, 10, 234];
+
+  let obj = {
+    Name: "Ali",
+    age: 20
+  };
 
   return (
     <>
-      {/* <Props data={arr} />
-      <Props data={logo} />   */}
+      {/* <h1 className='bg-red-600'>hello world</h1> */}
+      {/* <Props data={arr} /> */}
       {/* <Condition /> */}
-      {/* <Input/> */}
-      {/* <Defaultprops/> */}
-      {/* <Controledcomponent/> */}
-      {/* <Checkbox/> */}
-      {/* <Radiobtn/> */}
-      {/* <Loop/> */}
-      <Componentloop/>
+      {/* <Input /> */}
+      {/* <Defaultprops /> */}
+      {/* <Controledcomponent /> */}
+      {/* <Checkbox /> */}
+      {/* <Radiobtn /> */}
+      {/* <Loop /> */}
+      {/* <Componentloop /> */}
+      {/* <Propsx text="hello world" /> */}
+      {/* <Usestate /> */}
+      {/* <Conditionalrendering /> */}
+      {/* <Array arr={arr} /> */}
+      {/* <Propsx src="src/assets/logo.jpg" /> */}
+      {/* <Object obj={obj} /> */}
+      {/* <Function /> */}
+
+
+      {/* <Useeffect /> */}
+
+      <Usereff/>
     </>
   );
 }

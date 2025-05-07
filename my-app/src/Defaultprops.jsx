@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Defaultprops = ({Name = "Ali"}) => {
+const Defaultprops = ({Name = "kuch b"}) => {
+
+
   return (
     <div>
       <h1>{Name}</h1>
