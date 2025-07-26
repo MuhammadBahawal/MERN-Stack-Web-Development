@@ -1,0 +1,1 @@
+// i am using writefilesync function to write anything in file 

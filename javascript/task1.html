@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>show password</title>
+    <style>
+        input{
+            border: none;
+            margin-left: 10px;
+
+
+        }
+        .main{
+            border: 1px solid black;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        #eye{
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+         <label for="">Enter your password</label>
+    <div class="main">
+   
+        <input type="password" name="" id="password">
+        <i onclick="change()" id="eye" class="fa-solid fa-eye"></i>
+    </div>
+
+<script>
+    function change(){
+        let display = document.getElementById("eye")
+        let password = document.getElementById("password")
+
+        if(password.type =="password"){
+            password.type = "text";
+            display.classList.remove("fa-eye")
+            display.classList.add("fa-eye-slash")
+        }else{
+            password.type = "password";
+            display.classList.add("fa-eye")
+            display.classList.remove("fa-eye-slash")
+        }
+    }
+</script>
+</body>
+
+</html>

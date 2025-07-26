@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switcher</title>
+    <style>
+  body {
+    transition: all 0.3s ease;
+  }
+</style>
+</head>
+
+<body>
+    <button onclick="change()" id="btn">dark</button>
+
+    <script>
+        let bdl = document.getElementById("btn")
+        const change = () => {
+            if (bdl.innerHTML == "dark") {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                bdl.innerHTML = "light";
+            } else {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+
+                bdl.innerHTML = "dark";
+            }
+        }
+    </script>
+</body>
+
+</html>

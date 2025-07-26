@@ -9,6 +9,9 @@ import './styles.css';
 import Object from './Object';
 import Useeffect from './Useeffect';
 import Usereff from './Usereff';
+import Uncuntroledcomponent from './Uncuntroledcomponent';
+import Test1 from './Test1';
+import Lifting from './Lifting';
 
 function App() {
   let arr = ["hello", 20, 10, 234];
@@ -17,6 +20,14 @@ function App() {
     Name: "Ali",
     age: 20
   };
+
+  const change = (name)=>{
+    console.log("hello thi is lifting" , name)
+  }
+  const differ = (name)=>{
+    console.log("hello thi is lifting" , name)
+  }
+
 
   return (
     <>
@@ -41,7 +52,20 @@ function App() {
 
       {/* <Useeffect /> */}
 
+      {/* <Usereff/> */}
+      {/* <Uncuntroledcomponent/> */}
+      
+      {/* <Usereff/> */}
+      {/* <Test1/> */}
+
+      {/* <Lifting onchange = {change}/>
+      <Lifting prop = {differ}/> */}
+
       <Usereff/>
+
+      
+      
+      
     </>
   );
 }

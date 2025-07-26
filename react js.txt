@@ -1,3 +1,0 @@
-controled component 
-a controled component is form whose input field value controled by react state
- 
