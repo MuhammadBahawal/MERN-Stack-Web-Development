@@ -29,9 +29,15 @@
                             <h1 class="text-xl font-bold mb-2">
                                 <%= val %>
                             </h1>
-                            <a href="/read/<%= val %>" class="text-sm underline hover:text-gray-200">Read More...</a>
+                            <div class="flex w-full justify-between">
+                                <a href="/file/<%= val %>" class="text-sm underline hover:text-gray-200">Read
+                                    More...</a>
+                                <a class="text-sm" href="/edit/<%= val %>">Edit</a>
+                            </div>
+
                         </div>
                         <% }) %>
+
                 </div>
                 <% } else { %>
                     <p class="mt-4 text-white">No task yet</p>

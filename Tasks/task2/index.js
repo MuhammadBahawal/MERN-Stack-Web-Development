@@ -17,14 +17,40 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/file/:filename',(req,res)=>{
+app.get('/file/:filename', (req, res) => {
+    fs.readFile(path.join(__dirname, 'files', req.params.filename), "utf8", (err, data) => {
+        if (err) return res.send("Error reading file");
 
-    fs.readFile(`./files/${req.params.filename}`,"utf8",(err,data)=>{
-        console.log(data);
-        
-    })
+        res.render('show', {
+            filename: req.params.filename,
+            content: data
+        });
+    });
+});
+app.get('/edit/:filename', (req, res) => {
+    res.render('edit', { filename: req.params.filename });
+});
 
-})
+app.post('/edit', (req, res) => {
+    const oldName = req.body.previous;
+    let newName = req.body.new;
+
+    if (!newName.endsWith('.txt')) {
+        newName += '.txt';
+    }
+
+    const oldPath = path.join(__dirname, 'files', oldName);
+    const newPath = path.join(__dirname, 'files', newName);
+
+    fs.rename(oldPath, newPath, (err) => {
+        if (err) {
+            return res.send(' Error renaming file. It might already exist or name is invalid.');
+        }
+        res.redirect('/');
+    });
+});
+
+
 
 
 app.post('/create', (req, res) => {
